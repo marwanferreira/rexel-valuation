@@ -37,9 +37,9 @@ const head = (s, txt, x, y, w) => T(s, txt, { x, y, w, h: 0.3, fontSize: 12, bol
 const hdrRow = (cells, first) => cells.map((c, i) => ({ text: c, options: { bold: true, color: "FFFFFF", fill: { color: NAVY }, align: first === "c" ? "center" : (i ? "right" : "left"), fontSize: 9 } }));
 const row = (cells, opt) => cells.map((c, i) => ({ text: String(c), options: Object.assign({ align: i ? "right" : "left", fontSize: 9, color: THEME.colors.dk1 }, opt || {}) }));
 const tableOpts = (x, y, w, colW, o) => Object.assign({ x, y, w, colW, border: { type: "solid", pt: 0.5, color: "D9DCE1" }, fontFace: "Calibri", fontSize: 9, rowH: 0.24, margin: [2, 4, 2, 4], valign: "middle" }, o || {});
-const draft = (s, who) => { s.addShape(pres.ShapeType.roundRect, { x: 6.2, y: 0.12, w: 2.2, h: 0.22, fill: { color: "FFF4E8" }, line: { color: COPPER, width: 0.75 }, rectRadius: 0.05 }); T(s, "DRAFT FRAME – " + who + " to complete", { x: 6.2, y: 0.12, w: 2.2, h: 0.22, fontSize: 8, bold: true, color: C.accent1, align: "center", valign: "middle" }); };
+const draft = (s, who) => { s.addShape(pres.ShapeType.roundRect, { x: 6.75, y: 0.14, w: 1.65, h: 0.2, fill: { color: "FFF4E8" }, line: { color: "FFF4E8" }, rectRadius: 0.1 }); T(s, "Draft – " + who + " to complete", { x: 6.75, y: 0.14, w: 1.65, h: 0.2, fontSize: 7.5, bold: true, color: C.accent1, align: "center", valign: "middle" }); };
 const src = (s, txt) => T(s, txt, { x: 0.5, y: 5.05, w: 9.0, h: 0.2, fontSize: 7.5, color: C.accent3, italic: true });
-const logo = (s, key, label, x, y, w, h) => { const p = CH + "logos/" + key + ".png"; if (fs.existsSync(p)) { s.addImage({ path: p, x, y, w, h, sizing: { type: "contain", w, h } }); } else { s.addShape(pres.ShapeType.rect, { x, y, w, h, fill: { color: "FFFFFF" }, line: { color: "D9DCE1", width: 0.75 } }); T(s, label, { x, y, w, h, fontSize: 9, bold: true, color: C.text2, align: "center", valign: "middle", fontFace: "Cambria" }); } };
+const logo = (s, key, label, x, y, w, h) => { const p = CH + "logos/" + key + ".png"; s.addShape(pres.ShapeType.rect, { x, y, w, h, fill: { color: "FFFFFF" }, line: { color: "E3E5E9", width: 0.75 } }); if (fs.existsSync(p)) { s.addImage({ path: p, x: x + 0.04, y: y + 0.03, w: w - 0.08, h: h - 0.06, sizing: { type: "contain", w: w - 0.08, h: h - 0.06 } }); } else { T(s, label, { x, y, w, h, fontSize: 10, bold: true, color: C.text2, align: "center", valign: "middle", fontFace: "Cambria", charSpacing: 2 }); } };
 const f0 = (v) => (v < 0 ? "(" + Math.round(-v).toLocaleString("en-US") + ")" : Math.round(v).toLocaleString("en-US"));
 const f1 = (v) => v.toFixed(1);
 
@@ -65,8 +65,9 @@ T(s, "Should an investor acquire a stake?", { x: 0.6, y: 2.1, w: 8.8, h: 0.6, fo
 T(s, "Valuation of a listed company – listed peers, DCF and LBO bid", { x: 0.6, y: 2.75, w: 8.8, h: 0.4, fontSize: 14, color: "CADCFC" });
 s.addShape(pres.ShapeType.roundRect, { x: 7.1, y: 1.15, w: 2.3, h: 0.95, fill: { color: "FFFFFF" }, line: { color: "FFFFFF" }, rectRadius: 0.06 });
 logo(s, "rexel", "Rexel", 7.25, 1.25, 2.0, 0.75);
-s.addShape(pres.ShapeType.rect, { x: 0.6, y: 3.65, w: 8.8, h: 0.9, fill: { color: "13315C" }, line: { color: "13315C" } });
-T(s, [{ text: "Marwan Ferreira da Silva  ·  Douae El Adloun", options: { bold: true, breakLine: true } }, { text: "Introduction to Corporate Finance – Université Paris Dauphine-PSL, M2 104 Research in Finance  ·  Prof. David Heller", options: { breakLine: true } }, { text: "Valuation date: 30 October 2026  ·  Share price €34.47  ·  Submitted 2 November 2026", options: {} }], { x: 0.8, y: 3.72, w: 8.4, h: 0.8, fontSize: 11, color: C.background1, valign: "middle" });
+[["€34.47", "Share price, 30 Oct 2026"], ["€43–46", "Target range per share"], ["+25–35%", "Upside – BUY"]].forEach((c, i) => { const x = 0.6 + i * 2.1; s.addShape(pres.ShapeType.roundRect, { x, y: 3.25, w: 1.95, h: 0.75, fill: { color: "13315C" }, line: { color: "13315C" }, rectRadius: 0.06 }); T(s, c[0], { x: x + 0.12, y: 3.3, w: 1.75, h: 0.4, fontSize: 18, bold: true, color: i === 2 ? "F2A86F" : "FFFFFF", fontFace: "Cambria" }); T(s, c[1], { x: x + 0.12, y: 3.68, w: 1.75, h: 0.25, fontSize: 8, color: "CADCFC" }); });
+s.addShape(pres.ShapeType.rect, { x: 0.6, y: 4.2, w: 8.8, h: 0.82, fill: { color: "13315C" }, line: { color: "13315C" } });
+T(s, [{ text: "Marwan Ferreira da Silva  ·  Douae El Adloun", options: { bold: true, breakLine: true } }, { text: "Introduction to Corporate Finance – Université Paris Dauphine-PSL, M2 104 Research in Finance  ·  Prof. David Heller", options: { breakLine: true } }, { text: "Valuation date: 30 October 2026  ·  Share price €34.47  ·  Submitted 2 November 2026", options: {} }], { x: 0.8, y: 4.24, w: 8.4, h: 0.75, fontSize: 10.5, color: C.background1, valign: "middle" });
 s.addNotes("Title slide.");
 
 // ===================================================================== 2 EXEC SUMMARY
@@ -74,11 +75,10 @@ s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Opening" });
 s.addText("Executive summary – Buy: three methods converge 10–45% above a share price depressed by deal overhang", { placeholder: "title" });
 card(s, 0.5, 1.15, 4.2, 1.0, NAVY);
 T(s, "BUY – acquire a stake", { x: 0.65, y: 1.2, w: 3.9, h: 0.42, fontSize: 19, bold: true, color: C.background1, fontFace: "Cambria" });
-T(s, "Target range €43–46 per share (+25% to +35%): DCF base case to peer xEBITDA median. The LBO bid (€37.6) is the floor.", { x: 0.65, y: 1.6, w: 3.9, h: 0.5, fontSize: 10, color: "CADCFC" });
+T(s, "Target €43–46 per share (+25% to +35%), DCF and peers equally weighted; the LBO bid (€37.6) is the floor.", { x: 0.65, y: 1.6, w: 3.9, h: 0.5, fontSize: 10, color: "CADCFC" });
 stat(s, 0.5, 2.28, 2.0, "€34.47", "Share price 30 Oct 2026, below the €34.75 issue price");
 stat(s, 2.7, 2.28, 2.0, "€43.1", "DCF base case – WACC 8.9%, g 2.0% (+25%)", COPPER);
-stat(s, 0.5, 3.38, 2.0, "€46–50", "Listed peers, xEBITDA median to average (+34–46%)", COPPER);
-stat(s, 2.7, 3.38, 2.0, "€37.6", "Maximum LBO bid at 20% IRR (+9%): the floor");
+s.addTable([hdrRow(["Method", "€ / share", "Weight", "Contribution"]), row(["DCF base case", "43.1", "50%", "21.6"]), row(["Peers xEBITDA FY+1 (median)", "48.4", "50%", "24.2"]), row(["Target price (rounded range €43–46)", "45.8", "", "+33%"], { bold: true, fill: { color: LT2 } }), row(["LBO bid at 20% IRR – floor", "37.6", "–", "+9%"], { color: GREY })], tableOpts(0.5, 3.4, 4.2, [2.1, 0.7, 0.6, 0.8], { rowH: 0.2, fontSize: 8 }));
 s.addImage({ path: CH + "02_football_field.png", x: 4.95, y: 1.15, w: 4.55, h: 3.25 });
 s.addTable([hdrRow(["Market cap", "Net debt + min.", "EV", "EV / EBITDAaL 26e", "EV / adj. EBITA 26e", "P/E 26e", "Dividend yield", "FCF yield 26e"], "c"),
   row(["€10.6bn", "€2.8bn", "€13.5bn", "9.8x", "10.3x", "14.9x", "3.5%", "4.8%"], { align: "center", bold: true, fontSize: 9.5 })], tableOpts(0.5, 4.5, 9.0, [1.1, 1.15, 1.0, 1.3, 1.3, 1.0, 1.05, 1.1], { rowH: 0.22 }));
@@ -106,17 +106,17 @@ s.addNotes("DOUAE – to complete: (1) market size and expected growth with a ci
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Market and company" });
 s.addText("Competitive landscape – Rexel is the #2 global distributor; Sonepar is the only rival of comparable reach", { placeholder: "title" });
 draft(s, "Douae");
-const comp = [["sonepar", "Sonepar", "Private (family)", "€33.6bn", "40", "#1 worldwide; US #1 via Sonepar USA; digital 'Spark' programme"], ["wesco", "Wesco", "Listed (NYSE)", "$25.0bn", "c.50", "US-centric; data-centre, utility and datacom supply chain"], ["rexel", "Rexel", "Listed (Euronext)", "€19.4bn", "17", "#2 worldwide; 51% North America; value-added services, GCG"], ["graybar", "Graybar", "Private (employees)", "$11bn", "US/Canada", "Electrical, comms and data networking, US #3"], ["ced", "CED", "Private", "c.$8bn", "US", "Decentralised branch model, 700+ locations"], ["ahlsell", "Ahlsell · Würth · Solar", "Private / listed", "€3–5bn each", "Regional", "Nordics, DACH and Benelux leaders"]];
-const RH = 0.44, TY = 1.15, HH = 0.24;
+const comp = [["sonepar", "Sonepar", "Private (family)", "€33.6bn", "40", "#1 worldwide; US #1 via Sonepar USA; digital 'Spark' programme"], ["wesco", "Wesco", "Listed (NYSE)", "$25.0bn", "c.50", "US-centric; data-centre, utility and datacom supply chain"], ["rexel", "Rexel", "Listed (Euronext)", "€19.4bn", "17", "#2 worldwide; 51% North America; value-added services, GCG"], ["graybar", "Graybar", "Private (employees)", "$11bn", "US/Canada", "Electrical, comms and data networking, US #3"], ["ced", "CED", "Private", "c.$8bn", "US", "Decentralised branch model, 700+ locations"], ["wuerth", "Würth", "Private (family)", "€20bn group", "80+", "DACH electrical wholesale; Ahlsell and Solar lead the Nordics and Benelux"]];
+const RH = 0.43, TY = 1.15, HH = 0.24;
 s.addTable([hdrRow(["", "Company", "Ownership", "Sales", "Countries", "Positioning"])].concat(comp.map(c => row(["", c[1], c[2], c[3], c[4], c[5]], { align: "left", fontSize: 8.5, bold: c[0] === "rexel", color: c[0] === "rexel" ? COPPER : THEME.colors.dk1 }))), tableOpts(0.5, TY, 6.0, [0.95, 1.05, 1.0, 0.75, 0.65, 1.6], { rowH: RH, fontSize: 8.5 }));
-comp.forEach((c, i) => logo(s, c[0], c[1], 0.56, TY + HH + RH * i + 0.07, 0.83, RH - 0.14));
+comp.forEach((c, i) => logo(s, c[0], c[1], 0.56, TY + HH + RH * i + 0.06, 0.83, RH - 0.12));
 head(s, "How Rexel competes", 6.8, 1.1, 2.7);
 bullets(s, [{ text: "Value-added services: ", options: { bold: true } }, { text: "moving upstream (engineering, kitting, project support); GCG brings >75% value-added content.", options: { bullet: false } },
   { text: "Digital: ", options: { bold: true } }, { text: "36% of Q3 2026 sales online (44% in Europe); AI tools lifted North America by +600 bp y/y.", options: { bullet: false } },
   { text: "High-growth verticals: ", options: { bold: true } }, { text: "data centres, utilities, automation; North American backlog > $3bn (+42% vs end-2025).", options: { bullet: false } },
   { text: "Bolt-on M&A: ", options: { bold: true } }, { text: "four North American deals in 2026 (TC 360, Revere, DEE, GCG); 2–3 pts of growth a year.", options: { bullet: false } }], { x: 6.8, y: 1.4, w: 2.7, h: 3.0, fontSize: 9 });
-T(s, "Scale matters: purchasing terms, logistics density and digital investment favour the top five, which keep gaining share from the long tail – the source of Rexel's 2–3 pts of annual M&A growth.", { x: 0.5, y: 4.35, w: 6.0, h: 0.55, fontSize: 9, color: C.text2 });
-src(s, "Sources: company reports (Sonepar, Wesco, Rexel, Graybar), Rexel Q3 2026 presentation, GCG release; CED and regional players: trade press estimates. Logos are company trademarks (Wikimedia Commons). [Douae: verify the private players' figures]");
+T(s, "Scale matters: purchasing terms, logistics density and digital investment favour the top five, which keep gaining share from the long tail – the source of Rexel's 2–3 pts of annual M&A growth.", { x: 0.5, y: 4.52, w: 6.0, h: 0.45, fontSize: 8.5, color: C.text2 });
+src(s, "Sources: company reports (Sonepar, Wesco, Rexel, Graybar, Würth), Rexel Q3 2026 presentation, GCG release; CED: trade press estimates. Logos are company trademarks (Wikimedia Commons). [Douae: verify the private players' figures]");
 s.addNotes("DOUAE – to complete: verify the private players' sales (Graybar ~$11bn, CED ~$8bn, Ahlsell, Würth Elektrogroßhandel, Solar A/S) and Wesco's country count; add a market-share figure for Rexel in France (#1/#2) and in the US if available. Remove the DRAFT tag when done.");
 
 // ===================================================================== 5 COMPANY
@@ -162,7 +162,7 @@ src(s, "Sources: Yahoo Finance daily closes (price return, local currency); Rexe
 pres.addSection({ title: "Valuation" });
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Valuation" });
 s.addText("Listed peers – five B2B distributors; Rexel trades 2–4 turns below the sector median on every multiple", { placeholder: "title" });
-[["wesco", "Wesco"], ["grainger", "Grainger"], ["ferguson", "Ferguson"], ["watsco", "Watsco"], ["bunzl", "Bunzl"]].forEach((l, i) => logo(s, l[0], l[1], 0.5 + i * 1.25, 1.1, 1.1, 0.36));
+[["wesco", "Wesco"], ["grainger", "Grainger"], ["ferguson", "Ferguson"], ["watsco", "Watsco"], ["bunzl", "Bunzl"]].forEach((l, i) => logo(s, l[0], l[1], 0.5 + i * 1.24, 1.1, 1.14, 0.38));
 s.addTable([hdrRow(["Company", "Mkt cap (bn)", "Net debt (bn)", "EV/EBITDA LTM", "EV/EBITDA FY+1", "EV/EBIT LTM", "EV/EBIT FY+1", "P/E LTM", "P/E FY+1"]),
   row(["Wesco (US)", "$16.7", "$5.2", "13.8x", "12.4x", "16.2x", "14.6x", "23.5x", "16.4x"]), row(["Grainger (US)", "$64.2", "$1.9", "21.9x", "19.5x", "23.9x", "21.4x", "34.3x", "26.6x"]), row(["Ferguson (US/UK)", "$46.2", "$3.5", "13.9x", "12.9x", "15.6x", "14.4x", "19.6x", "18.8x"]), row(["Watsco (US)", "$10.9", "$0.1", "15.5x", "13.4x", "16.5x", "14.2x", "23.0x", "23.6x"]), row(["Bunzl (UK)", "£8.9", "£1.6", "8.8x", "8.3x", "13.2x", "12.5x", "19.4x", "14.5x"]),
   row(["Sector median", "", "", "13.9x", "12.9x", "16.2x", "14.4x", "23.0x", "18.8x"], { bold: true, fill: { color: LT2 } }), row(["Sector average", "", "", "14.8x", "13.3x", "17.1x", "15.4x", "24.0x", "20.0x"], { bold: true, fill: { color: LT2 } }),
