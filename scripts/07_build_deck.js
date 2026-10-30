@@ -38,7 +38,7 @@ const hdrRow = (cells, first) => cells.map((c, i) => ({ text: c, options: { bold
 const row = (cells, opt) => cells.map((c, i) => ({ text: String(c), options: Object.assign({ align: i ? "right" : "left", fontSize: 9, color: THEME.colors.dk1 }, opt || {}) }));
 const tableOpts = (x, y, w, colW, o) => Object.assign({ x, y, w, colW, border: { type: "solid", pt: 0.5, color: "D9DCE1" }, fontFace: "Calibri", fontSize: 9, rowH: 0.24, margin: [2, 4, 2, 4], valign: "middle" }, o || {});
 const draft = (s, who) => { s.addShape(pres.ShapeType.roundRect, { x: 6.75, y: 0.14, w: 1.65, h: 0.2, fill: { color: "FFF4E8" }, line: { color: "FFF4E8" }, rectRadius: 0.1 }); T(s, "Draft – " + who + " to complete", { x: 6.75, y: 0.14, w: 1.65, h: 0.2, fontSize: 7.5, bold: true, color: C.accent1, align: "center", valign: "middle" }); };
-const src = (s, txt) => T(s, txt, { x: 0.5, y: 5.05, w: 9.0, h: 0.2, fontSize: 7.5, color: C.accent3, italic: true });
+const src = (s, txt) => T(s, txt, { x: 0.5, y: 4.99, w: 9.0, h: 0.2, fontSize: 7, color: C.accent3, italic: true, fit: "shrink" });
 const logo = (s, key, label, x, y, w, h) => { const p = CH + "logos/" + key + ".png"; s.addShape(pres.ShapeType.rect, { x, y, w, h, fill: { color: "FFFFFF" }, line: { color: "E3E5E9", width: 0.75 } }); if (fs.existsSync(p)) { s.addImage({ path: p, x: x + 0.04, y: y + 0.03, w: w - 0.08, h: h - 0.06, sizing: { type: "contain", w: w - 0.08, h: h - 0.06 } }); } else { T(s, label, { x, y, w, h, fontSize: 10, bold: true, color: C.text2, align: "center", valign: "middle", fontFace: "Cambria", charSpacing: 2 }); } };
 const f0 = (v) => (v < 0 ? "(" + Math.round(-v).toLocaleString("en-US") + ")" : Math.round(v).toLocaleString("en-US"));
 const f1 = (v) => v.toFixed(1);
@@ -99,24 +99,28 @@ const drivers = [["Data centres & AI", "Triple-digit growth at Rexel US in Q3 20
 drivers.forEach((d, i) => { const y = 1.42 + i * 0.82; card(s, 5.4, y, 4.1, 0.72); s.addShape(pres.ShapeType.ellipse, { x: 5.52, y: y + 0.18, w: 0.36, h: 0.36, fill: { color: COPPER }, line: { color: COPPER } }); T(s, String(i + 1), { x: 5.52, y: y + 0.18, w: 0.36, h: 0.36, fontSize: 12, bold: true, color: C.background1, align: "center", valign: "middle" }); T(s, d[0], { x: 6.0, y: y + 0.07, w: 3.4, h: 0.25, fontSize: 10.5, bold: true, color: C.text2 }); T(s, d[1], { x: 6.0, y: y + 0.32, w: 3.4, h: 0.4, fontSize: 8.5, color: C.text1 }); });
 head(s, "Risks", 5.4, 3.95, 4.1);
 T(s, "Cyclical exposure to non-residential construction · copper (cables c.16% of sales, copper c.60% of cable) · pricing pressure and digital disintermediation · interest rates.", { x: 5.4, y: 4.22, w: 4.1, h: 0.7, fontSize: 9.5 });
-src(s, "Sources: Sonepar 2025 results; Wesco LTM (Yahoo Finance); Rexel FY 2025 and Q3 2026 releases; Electrical Wholesaling 2026 Electrical Pyramid; Axia Growth distribution M&A 2026. [Douae: add market size + growth with a cited report or Rexel's URD chapter 1 / CMD]");
+src(s, "Sources: Sonepar 2025 results; Wesco LTM (Yahoo Finance); Rexel FY 2025 and Q3 2026 releases; Electrical Wholesaling 2026 Electrical Pyramid; Axia Growth distribution M&A 2026.");
 s.addNotes("DOUAE – to complete: (1) market size and expected growth with a citable source (Rexel URD 2025 chapter 1 'addressable market', Capital Markets Day deck, or a market report); (2) one sentence on the three end-markets (residential, non-residential, industrial) and their 2026 trend; (3) check Graybar/CED figures (press or MDM top distributors list). Keep the chart; replace '(est.)' once sourced. Remove the DRAFT tag when done.");
 
 // ===================================================================== 4 COMPETITIVE LANDSCAPE
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Market and company" });
 s.addText("Competitive landscape – Rexel is the #2 global distributor; Sonepar is the only rival of comparable reach", { placeholder: "title" });
 draft(s, "Douae");
-const comp = [["sonepar", "Sonepar", "Private (family)", "€33.6bn", "40", "#1 worldwide; US #1 via Sonepar USA; digital 'Spark' programme"], ["wesco", "Wesco", "Listed (NYSE)", "$25.0bn", "c.50", "US-centric; data-centre, utility and datacom supply chain"], ["rexel", "Rexel", "Listed (Euronext)", "€19.4bn", "17", "#2 worldwide; 51% North America; value-added services, GCG"], ["graybar", "Graybar", "Private (employees)", "$11bn", "US/Canada", "Electrical, comms and data networking, US #3"], ["ced", "CED", "Private", "c.$8bn", "US", "Decentralised branch model, 700+ locations"], ["wuerth", "Würth", "Private (family)", "€20bn group", "80+", "DACH electrical wholesale; Ahlsell and Solar lead the Nordics and Benelux"]];
-const RH = 0.43, TY = 1.15, HH = 0.24;
-s.addTable([hdrRow(["", "Company", "Ownership", "Sales", "Countries", "Positioning"])].concat(comp.map(c => row(["", c[1], c[2], c[3], c[4], c[5]], { align: "left", fontSize: 8.5, bold: c[0] === "rexel", color: c[0] === "rexel" ? COPPER : THEME.colors.dk1 }))), tableOpts(0.5, TY, 6.0, [0.95, 1.05, 1.0, 0.75, 0.65, 1.6], { rowH: RH, fontSize: 8.5 }));
-comp.forEach((c, i) => logo(s, c[0], c[1], 0.56, TY + HH + RH * i + 0.06, 0.83, RH - 0.12));
+const comp = [["sonepar", "Sonepar", "Private (family)", "€33.6bn", "40", "#1 worldwide; US #1 via Sonepar USA; 'Spark' digital programme"], ["wesco", "Wesco", "Listed (NYSE)", "$25.0bn", "c.50", "US-centric; data-centre, utility and datacom supply chain"], ["rexel", "Rexel", "Listed (Euronext)", "€19.4bn", "17", "#2 worldwide; 51% North America; value-added services, GCG"], ["graybar", "Graybar", "Private (employees)", "$11bn", "US/Canada", "Electrical, comms and data networking, US #3"], ["ced", "CED", "Private", "c.$8bn", "US", "Decentralised branch model, 700+ locations"], ["wuerth", "Würth", "Private (family)", "€20bn group", "80+", "DACH electrical wholesale; Ahlsell / Solar lead Nordics and Benelux"]];
+const cols = [["Company", 1.55, 0.9], ["Ownership", 2.45, 1.0], ["Sales", 3.45, 0.72], ["Countries", 4.17, 0.68], ["Positioning", 4.85, 1.6]];
+s.addShape(pres.ShapeType.rect, { x: 0.5, y: 1.15, w: 6.0, h: 0.3, fill: { color: NAVY }, line: { color: NAVY } });
+cols.forEach(c => T(s, c[0], { x: c[1], y: 1.15, w: c[2], h: 0.3, fontSize: 9, bold: true, color: "FFFFFF", valign: "middle" }));
+comp.forEach((c, i) => { const y = 1.45 + i * 0.52, rx = c[0] === "rexel";
+  s.addShape(pres.ShapeType.rect, { x: 0.5, y, w: 6.0, h: 0.52, fill: { color: i % 2 ? "FFFFFF" : LT2 }, line: { color: "E3E5E9", width: 0.5 } });
+  logo(s, c[0], c[1], 0.56, y + 0.07, 0.92, 0.38);
+  [c[1], c[2], c[3], c[4], c[5]].forEach((v, j) => T(s, v, { x: cols[j][1], y: y + 0.03, w: cols[j][2], h: 0.46, fontSize: j === 4 ? 7 : 8.5, bold: rx, color: rx ? C.accent1 : C.text1, valign: "middle" })); });
 head(s, "How Rexel competes", 6.8, 1.1, 2.7);
 bullets(s, [{ text: "Value-added services: ", options: { bold: true } }, { text: "moving upstream (engineering, kitting, project support); GCG brings >75% value-added content.", options: { bullet: false } },
   { text: "Digital: ", options: { bold: true } }, { text: "36% of Q3 2026 sales online (44% in Europe); AI tools lifted North America by +600 bp y/y.", options: { bullet: false } },
   { text: "High-growth verticals: ", options: { bold: true } }, { text: "data centres, utilities, automation; North American backlog > $3bn (+42% vs end-2025).", options: { bullet: false } },
   { text: "Bolt-on M&A: ", options: { bold: true } }, { text: "four North American deals in 2026 (TC 360, Revere, DEE, GCG); 2–3 pts of growth a year.", options: { bullet: false } }], { x: 6.8, y: 1.4, w: 2.7, h: 3.0, fontSize: 9 });
-T(s, "Scale matters: purchasing terms, logistics density and digital investment favour the top five, which keep gaining share from the long tail – the source of Rexel's 2–3 pts of annual M&A growth.", { x: 0.5, y: 4.52, w: 6.0, h: 0.45, fontSize: 8.5, color: C.text2 });
-src(s, "Sources: company reports (Sonepar, Wesco, Rexel, Graybar, Würth), Rexel Q3 2026 presentation, GCG release; CED: trade press estimates. Logos are company trademarks (Wikimedia Commons). [Douae: verify the private players' figures]");
+T(s, "Scale matters: purchasing terms, logistics density and digital investment favour the top five, which keep gaining share from the long tail – the source of Rexel's 2–3 pts of annual M&A growth.", { x: 0.5, y: 4.62, w: 6.0, h: 0.38, fontSize: 8, color: C.text2 });
+src(s, "Sources: company reports (Sonepar, Wesco, Rexel, Graybar, Würth), Rexel Q3 2026 presentation, GCG release; CED: trade press estimates. Logos: company trademarks.");
 s.addNotes("DOUAE – to complete: verify the private players' sales (Graybar ~$11bn, CED ~$8bn, Ahlsell, Würth Elektrogroßhandel, Solar A/S) and Wesco's country count; add a market-share figure for Rexel in France (#1/#2) and in the US if available. Remove the DRAFT tag when done.");
 
 // ===================================================================== 5 COMPANY
@@ -133,7 +137,7 @@ head(s, "Business", 3.8, 3.35, 2.8);
 bullets(s, ["Multichannel B2B distributor for residential, non-residential and industrial customers; 26,306 employees; US 38% of sales, France 19%.", "Warehouse sales 81%, direct 19%; cables c.16%; digital 36% of Q3 2026 sales.", "Free float 74%, Cevian Capital 23%, employees 1%; Ba1 / BB+ stable."], { x: 3.8, y: 3.62, w: 2.8, h: 1.4, fontSize: 8.5 });
 head(s, "Strategy – Axelerate 2028", 6.8, 3.35, 2.7);
 bullets(s, ["Sales growth 5–8% a year (M&A 2–3 pts); adj. EBITA margin > 7%; FCF conversion c.65%; payout ≥ 40%.", "2026 guidance, raised twice: growth c.7%, margin ≥ 6.4%, FCF conversion > 65%.", "GCG (Chicago): $1.4bn EV, > $1.1bn sales, c.11% EBITA margin, < 8x EBITDAaL post synergies, closing end-2026."], { x: 6.8, y: 3.62, w: 2.7, h: 1.4, fontSize: 8.5 });
-src(s, "Sources: Rexel FY 2025 release and financial statements, H1 2026 and Q3 2026 releases, GCG release, shareholding page (31 Dec 2025); 2022–23 from Yahoo Finance.");
+src(s, "Sources: Rexel FY 2025 release and financial statements, H1 2026 and Q3 2026 releases, GCG release, shareholding page (31 Dec 2025); 2022–23 Yahoo Finance.");
 s.addNotes("DOUAE – to complete: two lines on history (spun out of PPR in 2005, IPO 2007) and the CEO's repositioning (Guillaume Texier, since 2021); confirm the Axelerate 2028 targets from the Capital Markets Day deck. Remove the DRAFT tag when done.");
 
 // ===================================================================== 6 FINANCIAL PERFORMANCE
@@ -149,13 +153,13 @@ src(s, "Sources: Rexel FY 2025, H1 2026 and Q3 2026 releases; consensus collecte
 // ===================================================================== 7 STOCK
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Market and company" });
 s.addText("Stock market performance – strong results, weak share: Rexel has derated since the GCG deal and the capital increase", { placeholder: "title" });
-s.addImage({ path: CH + "01_stock_performance.png", x: 0.5, y: 1.1, w: 6.2, h: 2.85 });
+s.addImage({ path: CH + "01_stock_performance.png", x: 0.5, y: 1.1, w: 6.1, h: 2.8 });
 head(s, "Reading", 6.9, 1.1, 2.6);
 bullets(s, ["+37% over two years vs +93% for Wesco and +7% for the CAC 40: Rexel has captured the electrification theme, but far less than its US peer.", "Since the GCG announcement (25 Sep) the share has fallen below the €34.75 placement price, despite the Q3 beat (sales 4.8% above consensus).", "Sell-side: Buy consensus, 13 analysts, mean target €41.9 (range €30–46).", "Beta 1.25 (2-year weekly vs CAC 40); 0.98 on Yahoo (5-year monthly)."], { x: 6.9, y: 1.4, w: 2.6, h: 2.6, fontSize: 9 });
-head(s, "Share data and enterprise value build-up (30 Oct 2026)", 0.5, 4.0, 9.0);
+head(s, "Share data and enterprise value build-up (30 Oct 2026)", 0.5, 3.92, 9.0);
 s.addTable([hdrRow(["Price", "52-week", "Shares out.", "Market cap", "+ Net debt", "+ Minorities", "= EV", "EV / EBITDAaL 25A", "EV / EBITDAaL 26e", "EV / adj. EBITA 26e"], "c"),
-  row(["€34.47", "€28.83–39.80", "308.5m", "€10,634m", "€2,822m", "€12m", "€13,467m", "11.0x", "9.8x", "10.3x"], { align: "center", bold: true, fontSize: 8.5 })], tableOpts(0.5, 4.27, 9.0, [0.7, 1.05, 0.8, 0.95, 0.85, 0.8, 0.9, 1.0, 1.0, 0.95], { rowH: 0.22 }));
-T(s, "Shares: 296,997,254 + 14,388,490 placed at €34.75 (29 Sep 2026) – 2,890,248 treasury. Net debt: €3,322m at 30 June 2026 less €500m proceeds. EBITDAaL 2025A €1,227m, 2026e €1,379m.", { x: 0.5, y: 4.84, w: 9.0, h: 0.2, fontSize: 7, color: C.accent3, italic: true });
+  row(["€34.47", "€28.83–39.80", "308.5m", "€10,634m", "€2,822m", "€12m", "€13,467m", "11.0x", "9.8x", "10.3x"], { align: "center", bold: true, fontSize: 8.5 })], tableOpts(0.5, 4.17, 9.0, [0.7, 1.05, 0.8, 0.95, 0.85, 0.8, 0.9, 1.0, 1.0, 0.95], { rowH: 0.2, fontSize: 8 }));
+T(s, "Shares: 296,997,254 + 14,388,490 placed at €34.75 (29 Sep 2026) – 2,890,248 treasury. Net debt: €3,322m at 30 June 2026 less €500m proceeds. EBITDAaL 2025A €1,227m, 2026e €1,379m.", { x: 0.5, y: 4.8, w: 9.0, h: 0.18, fontSize: 7, color: C.accent3, italic: true });
 src(s, "Sources: Yahoo Finance daily closes (price return, local currency); Rexel press releases for events and share count; analyst targets per Yahoo Finance, 30 Oct 2026.");
 
 // ===================================================================== 8 COMPS TABLE
@@ -228,7 +232,7 @@ head(s, "Acquisition debt schedule (€m)", 4.8, 1.1, 4.7);
 s.addTable([hdrRow(["", "2026", "2027", "2028", "2029"]), row(["Senior A outstanding (year-end)", "2,759", "2,365", "1,971", "1,577"]), row(["  amortisation", "", "(394)", "(394)", "(394)"]), row(["  interest at 5.45% on average balance", "", "140", "118", "97"]), row(["Senior B €1,931m bullet – interest at 5.95%", "", "115", "115", "115"]), row(["Junior C €828m bullet – interest at 8.70%", "", "72", "72", "72"]), row(["Total acquisition interest", "", "327", "305", "284"], { bold: true, fill: { color: LT2 } })], tableOpts(4.8, 1.37, 4.7, [2.5, 0.55, 0.55, 0.55, 0.55], { rowH: 0.17, fontSize: 7 }));
 head(s, "Holding income statement and cash (€m)", 4.8, 3.0, 4.7);
 s.addTable([hdrRow(["", "2027", "2028", "2029"]), row(["Dividend received (100% of Rexel net income)", "954", "1,040", "1,080"]), row(["– Tax on dividend (5% × 27%)", "(13)", "(14)", "(15)"]), row(["+ Rexel's own tax, now paid at group level", "353", "385", "399"]), row(["– Interest on acquisition debt", "(327)", "(305)", "(284)"]), row(["– Tax of the fiscal group (27% × (EBT – interest))", "(265)", "(302)", "(323)"]), row(["= Holding net income", "703", "803", "858"], { bold: true }), row(["Cumulative cash after Senior A amortisation (394 p.a.)", "309", "718", "1,182"], { bold: true, fill: { color: LT2 } })], tableOpts(4.8, 3.25, 4.7, [2.8, 0.63, 0.63, 0.64], { rowH: 0.16, fontSize: 7 }));
-T(s, "Model: LBO sheet (course method, Part 5). Rexel's plan: consensus 2026–28 then soft landing; interest on its own debt at 5.6%. Euribor 6M 2.2% to verify.", { x: 0.5, y: 4.95, w: 4.1, h: 0.3, fontSize: 7, color: C.accent3, italic: true });
+T(s, "Model: LBO sheet (course method, Part 5). Rexel's plan: consensus 2026–28 then soft landing; interest on its own debt at 5.6%. Euribor 6M 2.2% to verify.", { x: 0.5, y: 4.9, w: 4.1, h: 0.3, fontSize: 7, color: C.accent3, italic: true });
 
 // ===================================================================== 13 LBO RESULT
 s = pres.addSlide({ masterName: "CONTENT", sectionTitle: "Valuation" });
@@ -263,6 +267,6 @@ col(0.5, "Thesis", ["Best operating momentum since 2022: +11.4% same-day growth,
 col(3.575, "Catalysts", ["GCG closing by year-end and first synergy guidance.", "FY 2026 results (February 2027): delivery of the ≥6.4% margin and 2027 outlook including GCG.", "Consensus upgrades: the October consensus predates the Q3 beat and the guidance raise.", "Share price below the €34.75 placement: institutional support at that level."], "CADCFC");
 col(6.65, "Risks", ["US data-centre cycle and tougher comparables in Q4 2026.", "GCG integration and synergy delivery; execution of four acquisitions in one year.", "Copper, pricing and European macro; French sovereign spread lifting the cost of capital.", "Stop-loss logic: a 2028 margin below 6.5% removes most of the upside."], "F2A86F");
 T(s, "Sizing: a long-term equity stake at or below €37 (the LBO floor) with a €43–46 target offers an asymmetric 3:1 upside/downside; we would not pursue a leveraged buyout at a control premium.", { x: 0.5, y: 4.55, w: 9.0, h: 0.42, fontSize: 10, color: "FFFFFF", bold: true });
-T(s, "Sources: Rexel releases and financial statements (FY 2025, H1 2026, Q3 2026, GCG, capital increase); Rexel broker consensus (15 Oct 2026); Yahoo Finance; Trading Economics; Damodaran (Jan 2026); Electrical Wholesaling. Full model and data on github.com/marwanferreira/rexel-valuation.", { x: 2.1, y: 5.0, w: 6.7, h: 0.28, fontSize: 7, color: "8DA9C4" });
+T(s, "Sources: Rexel releases and financial statements 2025–26; Rexel broker consensus (15 Oct 2026); Yahoo Finance; Trading Economics; Damodaran; Electrical Wholesaling. Model: github.com/marwanferreira/rexel-valuation", { x: 0.5, y: 4.98, w: 9.0, h: 0.18, fontSize: 6.5, color: "8DA9C4" });
 
 (async () => { await pres.writeFile({ fileName: OUT }); await applyTheme(OUT, THEME); console.log("written", OUT); })();
