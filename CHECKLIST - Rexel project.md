@@ -1,0 +1,168 @@
+# Rexel valuation project — checklist
+
+Team: Marwan + Douae. Course: Intro to corporate finance, M2 104, Prof. David Heller.
+
+Every line is tagged with where it comes from, so nobody mistakes a suggestion for a rule:
+
+- **[PDF]** = written in the official instructions (`Instructions EN - Project to value a listed company 26-27 (2).pdf`). Non-negotiable.
+- **[COURSE]** = not in the PDF, but it is how the prof did it in class (Part 4 Moncler / LVMH, Part 5 Carrefour LBO). He will expect it.
+- **[REC]** = our own recommendation (good practice, not a rule). Drop it if short on time.
+
+---
+
+## 1. Hard rules — [PDF]
+
+- [ ] **Topic: Rexel.** Financial analysis of Rexel to recommend whether or not to acquire a stake. [PDF]
+- [ ] **Work in pairs.** [PDF]
+- [ ] **Format: PowerPoint converted to PDF.** [PDF]
+- [ ] **No more than 15 slides.** The PDF says "15 slides", not pages. Once converted, that is 15 PDF pages. [PDF]
+    - [ ] [REC] Title slide and sources slide count toward the 15 unless the prof says otherwise. Assume they count.
+- [ ] **Send to david.heller@dauphine.psl.eu.** [PDF]
+- [ ] **Deadline: before 3 November.** "Any delay will result in a penalty of points." [PDF]
+    - [ ] [REC] Send by the evening of Sunday 2 November at the latest. Do not wait for the 3rd.
+    - [ ] [REC] Put both names, the course name and "M2 104" on the title slide.
+- [ ] **Cite the sources of the data used.** [PDF]
+- [ ] **Each slide: essential information only, no visual overload.** [PDF]
+- [ ] **Use graphs, tables and diagrams to illustrate.** [PDF]
+
+## 2. Required sections — [PDF]
+
+The PDF lists these six, in this order. All six must be there.
+
+- [ ] **Market overview**: size, trends, competition, risks, opportunities. [PDF]
+- [ ] **Company overview**: main activities, operating segments, competitive advantages, strategic positioning. [PDF]
+- [ ] **Valuation results** from the methods used, with explanation of the assumptions: [PDF]
+    - [ ] DCF: justify growth rate, discount rate "etc." [PDF]
+    - [ ] Market comparables: justify the choice of companies in the sample. [PDF]
+- [ ] **LBO-style bid by an investment fund.** [PDF]
+- [ ] **Interpretation of results**: critical analysis, consistency with market data, sensitivity to assumptions. [PDF]
+- [ ] **Investment recommendation**: clear and structured argument, acquire a stake or not. [PDF]
+
+## 3. Grading criteria — [PDF]
+
+Check the deck against each one before sending.
+
+- [ ] Quality of market and company analysis. [PDF]
+- [ ] Relevance of assumptions and methodological rigour of valuations and bid. [PDF]
+- [ ] Clarity and accuracy of interpretation of results. [PDF]
+- [ ] Quality of investment recommendations. [PDF]
+- [ ] Visual presentation and clarity of supporting materials. [PDF]
+
+---
+
+## 4. What the prof expects inside each model — [COURSE]
+
+Not written in the PDF, but this is exactly how he built the class cases. Reuse the workbooks in `Part 4/Excel/` and `Part 5/Excel/`.
+
+### Comparables (Moncler method, Part 4)
+- [ ] EV of each peer = market cap + net debt. [COURSE]
+- [ ] Multiples: xSales, xEBITDA, xEBIT, P/E, for two years (current year + next). [COURSE]
+- [ ] Sector multiple = average of the peers. [COURSE]
+- [ ] Rexel equity = sector multiple × Rexel aggregate − Rexel net debt (P/E gives equity directly). [COURSE]
+- [ ] Compare to Rexel's market cap and compute the upside/downside. [COURSE]
+- [ ] Explain *why* the multiples disagree (margin vs peers, D&A intensity, volatile net income). [COURSE]
+- [ ] [REC] Use at least 3-4 peers (Moncler had only 2 and the prof flagged it as a weakness). Candidates: Sonepar is private, so think Wesco, Grainger, Legrand, Schneider, Bunzl, Fastenal. Justify each inclusion in one line.
+
+### DCF (LVMH method, Part 4)
+- [ ] Business plan: broker consensus for the next 2-3 years, then "soft landing" where growth converges linearly to the long-term g. [COURSE]
+- [ ] FCF = EBIT × (1 − tax) + D&A − capex − ΔWCR. [COURSE]
+- [ ] Capex converges to D&A at steady state; WCR kept as a % of sales. [COURSE]
+- [ ] Cost of equity by CAPM: rf + β × MRP. Cost of debt = rf + spread. WACC weighted by market values. [COURSE]
+- [ ] Terminal value by Gordon-Shapiro: FCF × (1+g) / (WACC − g). [COURSE]
+- [ ] Bridge: EV − net debt = equity, then per share vs the share price. [COURSE]
+- [ ] [REC] g between 1.5 % and 2.5 %. Anything above 3 % will be challenged.
+- [ ] [REC] Sensitivity table: WACC on one axis, g on the other. This covers the PDF's "sensitivity to assumptions" line in one slide.
+- [ ] [REC] State the valuation date and the share price used on that date.
+
+### LBO bid (Carrefour method, Part 5)
+- [ ] Holding company buys Rexel; sources = equity from the fund + senior debt (tranches A/B) + junior debt (C). [COURSE]
+- [ ] Target income statement, cash flow and balance sheet projected over the holding period. [COURSE]
+- [ ] Holding income statement with tax consolidation (interest on acquisition debt offsets the target's tax). [COURSE]
+- [ ] Debt schedule: repayment from the target's dividends / cash. [COURSE]
+- [ ] Exit value by a multiple, fund IRR target around 20 % over 3-5 years. [COURSE]
+- [ ] The bid = the maximum price per share the fund can pay and still reach its IRR, with a premium vs the current share price. [COURSE]
+- [ ] [REC] Show entry multiple, leverage (debt/EBITDA), exit multiple and IRR on one slide. That is the whole LBO story for a grader.
+
+---
+
+## 5. Data to collect — [REC]
+
+Nothing is provided by the prof, so everything comes from public sources. Keep a list of sources as you go for the sources slide.
+
+- [ ] Rexel annual report / universal registration document (latest full year) and the last half-year report: sales, EBITDA, EBIT, net income, D&A, capex, WCR, net debt, number of shares. Source: rexel.com investor section.
+- [ ] Rexel share price and market cap on a fixed valuation date (Euronext Paris, ticker RXL).
+- [ ] Broker consensus for the next 2-3 years (sales, EBITDA, EBIT). Sources: Rexel's own consensus page if published, MarketScreener, Zonebourse.
+- [ ] Beta of Rexel (or sector unlevered beta re-levered, as in the Part 3 exam exercise).
+- [ ] Risk-free rate (10-year OAT or Bund), market risk premium, Rexel's credit spread (its bond yields or rating).
+- [ ] Peer financials and market caps on the same date as Rexel.
+- [ ] Market data: size of electrical distribution, growth drivers (electrification, data centres, energy transition), competitors (Sonepar, Wesco, Graybar), risks (cyclicality, copper prices, pricing pressure).
+- [ ] Typical LBO financing terms (leverage, interest rates by tranche) from the Part 5 case if nothing better is found.
+
+## 6. Slide budget — [REC]
+
+A way to fit everything in 15. Adjust freely.
+
+| # | Slide | Section |
+|---|-------|---------|
+| 1 | Title, names, date | — |
+| 2 | Executive summary: recommendation + football field chart | Recommendation |
+| 3 | Market: size and trends | Market |
+| 4 | Market: competition, risks, opportunities | Market |
+| 5 | Company: activities and segments | Company |
+| 6 | Company: competitive advantages, positioning, key financials | Company |
+| 7 | Comparables: peer sample and multiples | Valuation |
+| 8 | Comparables: Rexel implied value and reading | Valuation |
+| 9 | DCF: assumptions (WACC build-up, g, business plan) | Valuation |
+| 10 | DCF: FCF, terminal value, bridge, value per share | Valuation |
+| 11 | DCF sensitivity table (WACC × g) | Interpretation |
+| 12 | LBO: structure, sources and uses, debt schedule | LBO bid |
+| 13 | LBO: returns, max bid price, premium | LBO bid |
+| 14 | Interpretation: all methods vs market price, critical view | Interpretation |
+| 15 | Recommendation and sources | Recommendation |
+
+## 7. Before sending — [REC]
+
+- [ ] Count the pages of the exported PDF: 15 or fewer.
+- [ ] Every number on a slide traces back to a source or to the Excel model.
+- [ ] Same valuation date, same share count and same net debt used in all three methods.
+- [ ] Recommendation slide answers the exact question: acquire a stake, yes or no, and why.
+- [ ] File name is clean (e.g. `Rexel valuation - Ferreira Douae - M2 104.pdf`).
+- [ ] Both of you have read the final PDF, not just the PowerPoint.
+- [ ] Attach the Excel model to the email as a backup? Not required by the PDF, but it costs nothing and shows rigour.
+
+---
+
+## 8. Handoff — fill in
+
+| Who | What | Status |
+|-----|------|--------|
+| Marwan (30 Oct) | Data pack: all sources collected, `Model/Rexel - Inputs & data pack.xlsx` built, source PDFs filed in `Sources/` | Done |
+| Marwan (30 Oct) | Excel models built in the same workbook: sheets `Comps`, `DCF`, `LBO`, `Summary` (football-field data). Formulas evaluated and cross-checked with an independent Python replica. | Done |
+| Marwan (next) | Python charts (stock performance rebased, football field, margin benchmarking); replace proxy peer forward EBITDA/EBIT with MarketScreener figures if time | To do |
+| Douae | Market overview, competitive landscape, company overview, financial-performance slide, deck design | To do |
+| Both | Interpretation, football field reading, investment opinion | To do |
+
+Notes for Douae (written 30 Oct 2026 by Marwan):
+- **Valuation date is frozen at 30 October 2026**, share price €34.47 (Yahoo close, check it on Euronext). Use it everywhere.
+- **Everything is in `Model/Rexel - Inputs & data pack.xlsx`.** README sheet = the list of sources S1 to S15 with links, and the conventions (IFRS 16 leases, net debt definition, share count). Cite "S-numbers" on slides, then expand them on the sources slide.
+- **Source PDFs are in `Sources/`**: Q3 2026 release + presentation (22 Oct), broker consensus (15 Oct), GCG acquisition release (25 Sep), FY 2025 release, 2025 financial statements.
+- **Big news to build the story around:** Q3 same-day growth +11.4% (best since 2022), US +18.2% with data centres at 13% of US sales, guidance raised twice in 2026 (now c.7% growth, ≥6.4% adj. EBITA margin), GCG acquisition ($1.4bn EV, largest in 15 years) financed with a €500m capital increase at €34.75 on 29 Sep. The stock trades below the issue price. That tension (strong operations vs. share price) is the investment question.
+- **For the market slide:** Rexel's own description in the Q3 presentation (electrification, data centres, HVAC/solar/EV >20% of European sales), Sonepar €33.6bn (#1, private), Wesco c.$25bn LTM, Rexel €19.4bn, Graybar c.$11bn, CED c.$8bn (private). US top-10 distributors hold c.56% of industry sales (Electrical Wholesaling 2026 pyramid, S14). No reliable global market-size figure was found; use Rexel's addressable-market statements from its Capital Markets Day / URD chapter 1 and cite them.
+- **For the company slide:** segment sales and margins FY 2025 and H1 2026 are in the Rexel_Hist sheet (North America 51% of Q3 sales, Europe 43%, APAC 6%). Shareholders: public 74%, Cevian 23%.
+- **Do not change blue cells** in the Inputs workbook without telling Marwan; the models link to them.
+
+**Model results at 30 Oct 2026 (share price €34.47, 308.5m shares, market cap €10.6bn, net debt pro forma €2.8bn):**
+
+| Method | € per share | vs price | Where |
+|---|---|---|---|
+| Peers xEBITDA (median / average of Wesco, Grainger, Ferguson, Watsco, Bunzl) | 46 – 50 | +34% to +46% | `Comps` |
+| Peers xEBIT | 52 – 56 | | `Comps` |
+| Peers P/E | 43 – 53 | | `Comps` |
+| Peers xSales | 77 – 95 | not meaningful: Rexel's 6% margin vs 8-20% for peers | `Comps` |
+| DCF base (WACC 8.9%, g 2%, consensus plan then soft landing) | 43.1 | +25% | `DCF` cell L11 |
+| DCF sensitivity (K 8.5-9.5%, g 1.5-2.5%) | 37 – 50 | | `DCF` K18:Q23 |
+| LBO bid (fund IRR 20%, 3 years, 4.0x acquisition debt, exit at entry 10.3x EBIT) | 37.6 | +9% premium | `LBO` cell C113 |
+
+Reading for the deck: every method lands above the price. The market prices Rexel at 9.8x EBITDAaL 2026e against 13-14x for US distributors, i.e. a "European discount" plus the overhang of the GCG deal and the capital increase. An LBO fund could pay about a 9% premium and still earn 20%, which is thin; a strategic buyer (Sonepar, Wesco) could pay more. Investment opinion to argue: Buy / acquire a stake, target around €43-46, with risks: US cycle and data-centre concentration, copper, GCG integration, French sovereign spread.
+
+Model conventions (say them on the assumptions slide): flows after leases (EBITDAaL, adjusted EBITA) so lease liabilities are not in net debt; rf = 50% Bund + 50% US Treasury = 4.13% (Rexel is 51% North America); MRP 5.0% (Damodaran France); beta 1.2 (own regression 1.25, Yahoo 0.98); spread 1.5% (BB+); tax 27%; WACC 8.9% vs Rexel's own impairment-test WACCs of 8.4-9.8%; peer forward EBITDA/EBIT are proxies (next-year consensus revenue × LTM margin), flagged blue in `Comps`.
