@@ -138,7 +138,8 @@ A way to fit everything in 15. Adjust freely.
 |-----|------|--------|
 | Marwan (30 Oct) | Data pack: all sources collected, `Model/Rexel - Inputs & data pack.xlsx` built, source PDFs filed in `Sources/` | Done |
 | Marwan (30 Oct) | Excel models built in the same workbook: sheets `Comps`, `DCF`, `LBO`, `Summary` (football-field data). Formulas evaluated and cross-checked with an independent Python replica. | Done |
-| Marwan (next) | Python charts (stock performance rebased, football field, margin benchmarking); replace proxy peer forward EBITDA/EBIT with MarketScreener figures if time | To do |
+| Marwan (30 Oct) | Charts in `Charts/` (PNG + PDF): 01 stock performance with events, 02 football field, 03 financial performance (sales, margin, quarterly growth), 04 peer benchmark, 05 DCF sensitivity. Git repository initialised. | Done |
+| Marwan (next) | Publish the repo on GitHub; replace proxy peer forward EBITDA/EBIT with MarketScreener figures if time; build the deck | To do |
 | Douae | Market overview, competitive landscape, company overview, financial-performance slide, deck design | To do |
 | Both | Interpretation, football field reading, investment opinion | To do |
 
