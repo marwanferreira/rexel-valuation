@@ -181,6 +181,7 @@ Model conventions (say them on the assumptions slide): flows after leases (EBITD
 - [x] Slides 2, 14 and 15: Clarified LBO maximum bid versus downside floor.
 - [x] Removed unsupported 3:1 upside/downside claim.
 - [x] Removed Draft labels from assigned slides.
-- [ ] Confirm CED revenue estimate (~$8bn).
-- [ ] Find a reliable overall market CAGR, if available.
-- [ ] Verify Ahlsell and Solar figures, if required.
+- [x] Verified Solar A/S FY2025 revenue: DKK 12,171m (official annual report).
+- [x] Verified Ahlsell Group revenue scale: approximately SEK 50–51bn (company and Moody's sources).
+- [x] Reviewed CED revenue: c.$8bn remains unverified and explicitly labelled as an estimate.
+- [x] Reviewed Rexel's €320bn addressable market: no official aggregate CAGR identified; qualitative growth profiles retained.
