@@ -85,8 +85,8 @@ for ax,vals,t,fmt in [(axs[0],evm,"EV / EBITDA (last twelve months, x)","{:.1f}x
 src(axs[0],"Source: Yahoo Finance (S10), 30 Oct 2026; Rexel FY 2025 release (S4). US peers report EBITDA after operating-lease cost (comparable to Rexel's EBITDAaL).\nRexel: EBITDA after leases, net debt pro forma the €500m raise. Fastenal (light grey) excluded from the peer averages.")
 save(fig,"04_peer_benchmark")
 # ---------- 5. DCF sensitivity heatmap
-Ks=[7.5,8.0,8.5,9.0,9.5,10.0]; gs=[1.0,1.5,2.0,2.5,3.0]
-M=np.array([[48.5,44.3,40.7,37.6,34.8,32.3],[52.1,47.3,43.2,39.7,36.6,33.9],[56.3,50.8,46.1,42.2,38.7,35.7],[61.3,54.9,49.5,45.0,41.1,37.8],[67.4,59.8,53.5,48.3,43.9,40.1]])
+Ks=[7.5,8.0,8.5,8.9,9.5,10.0]; gs=[1.0,1.5,2.0,2.5,3.0]  # 8.9% = base-case WACC (8.87%)
+M=np.array([[48.5,44.3,40.7,38.3,34.8,32.3],[52.1,47.3,43.2,40.6,36.6,33.9],[56.3,50.8,46.1,43.1,38.7,35.7],[61.3,54.9,49.5,46.1,41.1,37.8],[67.4,59.8,53.5,49.6,43.9,40.1]])
 fig,ax=plt.subplots(figsize=(6.2,3.2))
 from matplotlib.colors import LinearSegmentedColormap
 cm=LinearSegmentedColormap.from_list("navy",["#DCE6F2","#4F7CAC","#0B2545"])
@@ -97,6 +97,6 @@ for i in range(len(gs)):
 ax.set_xticks(range(len(Ks))); ax.set_xticklabels([f"{k:.1f}%" for k in Ks]); ax.set_yticks(range(len(gs))); ax.set_yticklabels([f"{g_:.1f}%" for g_ in gs]); ax.set_xlabel("Cost of capital K"); ax.set_ylabel("Perpetual growth g")
 ax.add_patch(plt.Rectangle((2.5,1.5),1,1,fill=False,ec=ORANGE,lw=2.5)); ax.tick_params(length=0)
 for s in ax.spines.values(): s.set_visible(False)
-ax.set_title("DCF value per share (€) – sensitivity to K and g (base: K 8.9%, g 2.0% → €43)")
+ax.set_title("DCF value per share (€) – sensitivity to K and g (base: K 8.9%, g 2.0% → €43.1)")
 src(ax,"Source: team DCF model. Share price €34.47: every cell with K ≤ 9.5% and g ≥ 1.5% is above the price.")
 save(fig,"05_dcf_sensitivity")

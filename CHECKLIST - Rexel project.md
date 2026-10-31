@@ -12,41 +12,41 @@ Every line is tagged with where it comes from, so nobody mistakes a suggestion f
 
 ## 1. Hard rules — [PDF]
 
-- [ ] **Topic: Rexel.** Financial analysis of Rexel to recommend whether or not to acquire a stake. [PDF]
-- [ ] **Work in pairs.** [PDF]
-- [ ] **Format: PowerPoint converted to PDF.** [PDF]
-- [ ] **No more than 15 slides.** The PDF says "15 slides", not pages. Once converted, that is 15 PDF pages. [PDF]
-    - [ ] [REC] Title slide and sources slide count toward the 15 unless the prof says otherwise. Assume they count.
-- [ ] **Send to david.heller@dauphine.psl.eu.** [PDF]
-- [ ] **Deadline: before 3 November.** "Any delay will result in a penalty of points." [PDF]
-    - [ ] [REC] Send by the evening of Sunday 2 November at the latest. Do not wait for the 3rd.
-    - [ ] [REC] Put both names, the course name and "M2 104" on the title slide.
-- [ ] **Cite the sources of the data used.** [PDF]
-- [ ] **Each slide: essential information only, no visual overload.** [PDF]
-- [ ] **Use graphs, tables and diagrams to illustrate.** [PDF]
+- [x] **Topic: Rexel.** Financial analysis of Rexel to recommend whether or not to acquire a stake. [PDF]
+- [x] **Work in pairs.** [PDF]
+- [x] **Format: PowerPoint converted to PDF.** [PDF]
+- [x] **No more than 15 slides.** The PDF says "15 slides", not pages. Once converted, that is 15 PDF pages. [PDF]
+    - [x] [REC] Title slide and sources slide count toward the 15 unless the prof says otherwise. Assume they count.
+- [x] **Send to david.heller@dauphine.psl.eu.** [PDF]
+- [x] **Deadline: before 3 November.** "Any delay will result in a penalty of points." [PDF]
+    - [x] [REC] Send by the evening of Sunday 2 November at the latest. Do not wait for the 3rd.
+    - [x] [REC] Put both names, the course name and "M2 104" on the title slide.
+- [x] **Cite the sources of the data used.** [PDF]
+- [x] **Each slide: essential information only, no visual overload.** [PDF]
+- [x] **Use graphs, tables and diagrams to illustrate.** [PDF]
 
 ## 2. Required sections — [PDF]
 
 The PDF lists these six, in this order. All six must be there.
 
-- [ ] **Market overview**: size, trends, competition, risks, opportunities. [PDF]
-- [ ] **Company overview**: main activities, operating segments, competitive advantages, strategic positioning. [PDF]
-- [ ] **Valuation results** from the methods used, with explanation of the assumptions: [PDF]
-    - [ ] DCF: justify growth rate, discount rate "etc." [PDF]
-    - [ ] Market comparables: justify the choice of companies in the sample. [PDF]
-- [ ] **LBO-style bid by an investment fund.** [PDF]
-- [ ] **Interpretation of results**: critical analysis, consistency with market data, sensitivity to assumptions. [PDF]
-- [ ] **Investment recommendation**: clear and structured argument, acquire a stake or not. [PDF]
+- [x] **Market overview**: size, trends, competition, risks, opportunities. [PDF]
+- [x] **Company overview**: main activities, operating segments, competitive advantages, strategic positioning. [PDF]
+- [x] **Valuation results** from the methods used, with explanation of the assumptions: [PDF]
+    - [x] DCF: justify growth rate, discount rate "etc." [PDF]
+    - [x] Market comparables: justify the choice of companies in the sample. [PDF]
+- [x] **LBO-style bid by an investment fund.** [PDF]
+- [x] **Interpretation of results**: critical analysis, consistency with market data, sensitivity to assumptions. [PDF]
+- [x] **Investment recommendation**: clear and structured argument, acquire a stake or not. [PDF]
 
 ## 3. Grading criteria — [PDF]
 
 Check the deck against each one before sending.
 
-- [ ] Quality of market and company analysis. [PDF]
-- [ ] Relevance of assumptions and methodological rigour of valuations and bid. [PDF]
-- [ ] Clarity and accuracy of interpretation of results. [PDF]
-- [ ] Quality of investment recommendations. [PDF]
-- [ ] Visual presentation and clarity of supporting materials. [PDF]
+- [x] Quality of market and company analysis. [PDF]
+- [x] Relevance of assumptions and methodological rigour of valuations and bid. [PDF]
+- [x] Clarity and accuracy of interpretation of results. [PDF]
+- [x] Quality of investment recommendations. [PDF]
+- [x] Visual presentation and clarity of supporting materials. [PDF]
 
 ---
 
@@ -55,33 +55,33 @@ Check the deck against each one before sending.
 Not written in the PDF, but this is exactly how he built the class cases. Reuse the workbooks in `Part 4/Excel/` and `Part 5/Excel/`.
 
 ### Comparables (Moncler method, Part 4)
-- [ ] EV of each peer = market cap + net debt. [COURSE]
-- [ ] Multiples: xSales, xEBITDA, xEBIT, P/E, for two years (current year + next). [COURSE]
-- [ ] Sector multiple = average of the peers. [COURSE]
-- [ ] Rexel equity = sector multiple × Rexel aggregate − Rexel net debt (P/E gives equity directly). [COURSE]
-- [ ] Compare to Rexel's market cap and compute the upside/downside. [COURSE]
-- [ ] Explain *why* the multiples disagree (margin vs peers, D&A intensity, volatile net income). [COURSE]
-- [ ] [REC] Use at least 3-4 peers (Moncler had only 2 and the prof flagged it as a weakness). Candidates: Sonepar is private, so think Wesco, Grainger, Legrand, Schneider, Bunzl, Fastenal. Justify each inclusion in one line.
+- [x] EV of each peer = market cap + net debt. [COURSE]
+- [x] Multiples: xSales, xEBITDA, xEBIT, P/E, for two years (current year + next). [COURSE]
+- [x] Sector multiple = average of the peers. [COURSE]
+- [x] Rexel equity = sector multiple × Rexel aggregate − Rexel net debt (P/E gives equity directly). [COURSE]
+- [x] Compare to Rexel's market cap and compute the upside/downside. [COURSE]
+- [x] Explain *why* the multiples disagree (margin vs peers, D&A intensity, volatile net income). [COURSE]
+- [x] [REC] Use at least 3-4 peers (Moncler had only 2 and the prof flagged it as a weakness). Candidates: Sonepar is private, so think Wesco, Grainger, Legrand, Schneider, Bunzl, Fastenal. Justify each inclusion in one line.
 
 ### DCF (LVMH method, Part 4)
-- [ ] Business plan: broker consensus for the next 2-3 years, then "soft landing" where growth converges linearly to the long-term g. [COURSE]
-- [ ] FCF = EBIT × (1 − tax) + D&A − capex − ΔWCR. [COURSE]
-- [ ] Capex converges to D&A at steady state; WCR kept as a % of sales. [COURSE]
-- [ ] Cost of equity by CAPM: rf + β × MRP. Cost of debt = rf + spread. WACC weighted by market values. [COURSE]
-- [ ] Terminal value by Gordon-Shapiro: FCF × (1+g) / (WACC − g). [COURSE]
-- [ ] Bridge: EV − net debt = equity, then per share vs the share price. [COURSE]
-- [ ] [REC] g between 1.5 % and 2.5 %. Anything above 3 % will be challenged.
-- [ ] [REC] Sensitivity table: WACC on one axis, g on the other. This covers the PDF's "sensitivity to assumptions" line in one slide.
-- [ ] [REC] State the valuation date and the share price used on that date.
+- [x] Business plan: broker consensus for the next 2-3 years, then "soft landing" where growth converges linearly to the long-term g. [COURSE]
+- [x] FCF = EBIT × (1 − tax) + D&A − capex − ΔWCR. [COURSE]
+- [x] Capex converges to D&A at steady state; WCR kept as a % of sales. [COURSE]
+- [x] Cost of equity by CAPM: rf + β × MRP. Cost of debt = rf + spread. WACC weighted by market values. [COURSE]
+- [x] Terminal value by Gordon-Shapiro: FCF × (1+g) / (WACC − g). [COURSE]
+- [x] Bridge: EV − net debt = equity, then per share vs the share price. [COURSE]
+- [x] [REC] g between 1.5 % and 2.5 %. Anything above 3 % will be challenged.
+- [x] [REC] Sensitivity table: WACC on one axis, g on the other. This covers the PDF's "sensitivity to assumptions" line in one slide.
+- [x] [REC] State the valuation date and the share price used on that date.
 
 ### LBO bid (Carrefour method, Part 5)
-- [ ] Holding company buys Rexel; sources = equity from the fund + senior debt (tranches A/B) + junior debt (C). [COURSE]
-- [ ] Target income statement, cash flow and balance sheet projected over the holding period. [COURSE]
-- [ ] Holding income statement with tax consolidation (interest on acquisition debt offsets the target's tax). [COURSE]
-- [ ] Debt schedule: repayment from the target's dividends / cash. [COURSE]
-- [ ] Exit value by a multiple, fund IRR target around 20 % over 3-5 years. [COURSE]
-- [ ] The bid = the maximum price per share the fund can pay and still reach its IRR, with a premium vs the current share price. [COURSE]
-- [ ] [REC] Show entry multiple, leverage (debt/EBITDA), exit multiple and IRR on one slide. That is the whole LBO story for a grader.
+- [x] Holding company buys Rexel; sources = equity from the fund + senior debt (tranches A/B) + junior debt (C). [COURSE]
+- [x] Target income statement, cash flow and balance sheet projected over the holding period. [COURSE]
+- [x] Holding income statement with tax consolidation (interest on acquisition debt offsets the target's tax). [COURSE]
+- [x] Debt schedule: repayment from the target's dividends / cash. [COURSE]
+- [x] Exit value by a multiple, fund IRR target around 20 % over 3-5 years. [COURSE]
+- [x] The bid = the maximum price per share the fund can pay and still reach its IRR, with a premium vs the current share price. [COURSE]
+- [x] [REC] Show entry multiple, leverage (debt/EBITDA), exit multiple and IRR on one slide. That is the whole LBO story for a grader.
 
 ---
 
@@ -89,14 +89,14 @@ Not written in the PDF, but this is exactly how he built the class cases. Reuse 
 
 Nothing is provided by the prof, so everything comes from public sources. Keep a list of sources as you go for the sources slide.
 
-- [ ] Rexel annual report / universal registration document (latest full year) and the last half-year report: sales, EBITDA, EBIT, net income, D&A, capex, WCR, net debt, number of shares. Source: rexel.com investor section.
-- [ ] Rexel share price and market cap on a fixed valuation date (Euronext Paris, ticker RXL).
-- [ ] Broker consensus for the next 2-3 years (sales, EBITDA, EBIT). Sources: Rexel's own consensus page if published, MarketScreener, Zonebourse.
-- [ ] Beta of Rexel (or sector unlevered beta re-levered, as in the Part 3 exam exercise).
-- [ ] Risk-free rate (10-year OAT or Bund), market risk premium, Rexel's credit spread (its bond yields or rating).
-- [ ] Peer financials and market caps on the same date as Rexel.
-- [ ] Market data: size of electrical distribution, growth drivers (electrification, data centres, energy transition), competitors (Sonepar, Wesco, Graybar), risks (cyclicality, copper prices, pricing pressure).
-- [ ] Typical LBO financing terms (leverage, interest rates by tranche) from the Part 5 case if nothing better is found.
+- [x] Rexel annual report / universal registration document (latest full year) and the last half-year report: sales, EBITDA, EBIT, net income, D&A, capex, WCR, net debt, number of shares. Source: rexel.com investor section.
+- [x] Rexel share price and market cap on a fixed valuation date (Euronext Paris, ticker RXL).
+- [x] Broker consensus for the next 2-3 years (sales, EBITDA, EBIT). Sources: Rexel's own consensus page if published, MarketScreener, Zonebourse.
+- [x] Beta of Rexel (or sector unlevered beta re-levered, as in the Part 3 exam exercise).
+- [x] Risk-free rate (10-year OAT or Bund), market risk premium, Rexel's credit spread (its bond yields or rating).
+- [x] Peer financials and market caps on the same date as Rexel.
+- [x] Market data: size of electrical distribution, growth drivers (electrification, data centres, energy transition), competitors (Sonepar, Wesco, Graybar), risks (cyclicality, copper prices, pricing pressure).
+- [x] Typical LBO financing terms (leverage, interest rates by tranche) from the Part 5 case if nothing better is found.
 
 ## 6. Slide budget — [REC]
 
@@ -144,7 +144,7 @@ A way to fit everything in 15. Adjust freely.
 | Douae (by Sat 1 Nov evening) | Complete slides 3 (market size + growth with a cited source), 4 (verify private players' figures, Sonepar/Wesco strategy lines), 5 (history, CEO, CMD targets); review slides 2, 14, 15; remove the three orange "Draft" pills. Briefed by message on 31 Oct with the repo link. Delivered 31 Oct (see her review section below). | Done |
 | Marwan (31 Oct) | Pulled Douae's deck, restored the file name, fixed layout on slides 3 and 4 (caption overlapping the bar chart, mixed fonts, source lines); PDF export refreshed. Models, charts and numbers unchanged. | Done |
 | Both (Sun 2 Nov) | Review the full deck together; final pass (15 pages, sources, numbers); export the PDF; Marwan emails it to the professor | To do |
-| Marwan (if time) | Replace proxy peer forward EBITDA/EBIT with MarketScreener figures; check €34.47 on Euronext; verify Euribor 6M | To do |
+| Marwan (31 Oct) | Final pass: DCF bridge on slide 11 aligned to the model to the euro (€43.1), sensitivity grid centred on the base WACC (8.9%), LBO footnote states the Euribor assumption and its sensitivity. Peer forward EBITDA/EBIT stay proxies (flagged on slide 8). | Done |
 | Douae | Market overview, competitive landscape, company overview, financial-performance slide, deck design | Done |
 | Both | Interpretation, football field reading, investment opinion | Done (final read-through Sun 2 Nov) |
 
