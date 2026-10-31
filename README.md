@@ -138,10 +138,12 @@ npm install pptxgenjs && NODE_PATH=./node_modules node 07_build_deck.js   # rege
 
 The workbook is saved without cached values and recalculates when opened in Excel.
 
-*Academic work; not investment advice.*
-## Presentation updates — 31 October 2026
 
-The 15-slide Rexel valuation presentation has been reviewed and updated.
+---
+
+## 7. Presentation review (31 October 2026)
+
+The three descriptive slides were completed and the recommendation slides reviewed by Douae El Adloun; Marwan Ferreira da Silva then checked the layout of the edited slides.
 
 - **Slide 3 — Market overview:** Added Rexel's €320bn addressable market, qualitative growth outlook and end-market trends. Updated Graybar's 2025 revenue to $12.9bn.
 - **Slide 4 — Competitive landscape:** Updated Graybar and Würth financial figures, checked Wesco's geographical footprint, and added Rexel's market positioning in France and the US.
@@ -151,3 +153,5 @@ The 15-slide Rexel valuation presentation has been reviewed and updated.
 **Outstanding data limitations:** CED's approximately $8bn revenue remains an estimate; no reliable overall CAGR was identified for Rexel's €320bn addressable market.
 
 All valuation outputs, financial models and investment recommendations remain unchanged.
+
+*Academic work; not investment advice.*

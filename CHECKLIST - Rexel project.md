@@ -141,11 +141,12 @@ A way to fit everything in 15. Adjust freely.
 | Marwan (30 Oct) | Charts in `Charts/` (PNG + PDF): 01 stock performance with events, 02 football field, 03 financial performance (sales, margin, quarterly growth), 04 peer benchmark, 05 DCF sensitivity. Git repository initialised. | Done |
 | Marwan (30 Oct) | Repo published: github.com/marwanferreira/rexel-valuation. Deck built: `Rexel valuation - deck.pptx` (15 slides, all quant slides final; slides 3, 4, 5 are framed drafts tagged for Douae) + a draft PDF export. | Done |
 | Marwan (31 Oct) | Deck densified to banker standard: logos (Rexel top-right, Dauphine bottom-left, peers and competitors, all on uniform tiles), charts restyled in the deck palette, weighted target price (€45.8, DCF 50% / peers 50%), EV build-up, implied-value arithmetic, MM cross-check, full FCF table, debt schedule, holding P&L, scenarios table. CED and Watsco have no usable public logo (wordmarks). | Done |
-| Douae (by Sat 1 Nov evening) | Complete slides 3 (market size + growth with a cited source), 4 (verify private players' figures, Sonepar/Wesco strategy lines), 5 (history, CEO, CMD targets); review slides 2, 14, 15; remove the three orange "Draft" pills. Briefed by message on 31 Oct with the repo link. | To do |
+| Douae (by Sat 1 Nov evening) | Complete slides 3 (market size + growth with a cited source), 4 (verify private players' figures, Sonepar/Wesco strategy lines), 5 (history, CEO, CMD targets); review slides 2, 14, 15; remove the three orange "Draft" pills. Briefed by message on 31 Oct with the repo link. Delivered 31 Oct (see her review section below). | Done |
+| Marwan (31 Oct) | Pulled Douae's deck, restored the file name, fixed layout on slides 3 and 4 (caption overlapping the bar chart, mixed fonts, source lines); PDF export refreshed. Models, charts and numbers unchanged. | Done |
 | Both (Sun 2 Nov) | Review the full deck together; final pass (15 pages, sources, numbers); export the PDF; Marwan emails it to the professor | To do |
 | Marwan (if time) | Replace proxy peer forward EBITDA/EBIT with MarketScreener figures; check €34.47 on Euronext; verify Euribor 6M | To do |
-| Douae | Market overview, competitive landscape, company overview, financial-performance slide, deck design | To do |
-| Both | Interpretation, football field reading, investment opinion | To do |
+| Douae | Market overview, competitive landscape, company overview, financial-performance slide, deck design | Done |
+| Both | Interpretation, football field reading, investment opinion | Done (final read-through Sun 2 Nov) |
 
 Notes for Douae (written 30 Oct 2026 by Marwan):
 - **Valuation date is frozen at 30 October 2026**, share price €34.47 (Yahoo close, check it on Euronext). Use it everywhere.
