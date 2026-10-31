@@ -172,3 +172,15 @@ Notes for Douae (written 30 Oct 2026 by Marwan):
 Reading for the deck: every method lands above the price. The market prices Rexel at 9.8x EBITDAaL 2026e against 13-14x for US distributors, i.e. a "European discount" plus the overhang of the GCG deal and the capital increase. An LBO fund could pay about a 9% premium and still earn 20%, which is thin; a strategic buyer (Sonepar, Wesco) could pay more. Investment opinion to argue: Buy / acquire a stake, target around €43-46, with risks: US cycle and data-centre concentration, copper, GCG integration, French sovereign spread.
 
 Model conventions (say them on the assumptions slide): flows after leases (EBITDAaL, adjusted EBITA) so lease liabilities are not in net debt; rf = 50% Bund + 50% US Treasury = 4.13% (Rexel is 51% North America); MRP 5.0% (Damodaran France); beta 1.2 (own regression 1.25, Yahoo 0.98); spread 1.5% (BB+); tax 27%; WACC 8.9% vs Rexel's own impairment-test WACCs of 8.4-9.8%; peer forward EBITDA/EBIT are proxies (next-year consensus revenue × LTM margin), flagged blue in `Comps`.
+## Douae — Presentation review (31 October 2026)
+
+- [x] Slide 3: Added market size, growth outlook and end-market trends.
+- [x] Slide 3: Updated Graybar revenue to $12.9bn.
+- [x] Slide 4: Reviewed competitor figures and Rexel's positioning in France and the US.
+- [x] Slide 5: Added corporate history and CEO's strategic repositioning; verified Axelerate 2028 targets.
+- [x] Slides 2, 14 and 15: Clarified LBO maximum bid versus downside floor.
+- [x] Removed unsupported 3:1 upside/downside claim.
+- [x] Removed Draft labels from assigned slides.
+- [ ] Confirm CED revenue estimate (~$8bn).
+- [ ] Find a reliable overall market CAGR, if available.
+- [ ] Verify Ahlsell and Solar figures, if required.
