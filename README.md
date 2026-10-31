@@ -139,3 +139,15 @@ npm install pptxgenjs && NODE_PATH=./node_modules node 07_build_deck.js   # rege
 The workbook is saved without cached values and recalculates when opened in Excel.
 
 *Academic work; not investment advice.*
+## Presentation updates — 31 October 2026
+
+The 15-slide Rexel valuation presentation has been reviewed and updated.
+
+- **Slide 3 — Market overview:** Added Rexel's €320bn addressable market, qualitative growth outlook and end-market trends. Updated Graybar's 2025 revenue to $12.9bn.
+- **Slide 4 — Competitive landscape:** Updated Graybar and Würth financial figures, checked Wesco's geographical footprint, and added Rexel's market positioning in France and the US.
+- **Slide 5 — Company overview:** Added Rexel's corporate history and CEO Guillaume Texier's strategic repositioning. Reviewed Axelerate 2028 financial targets.
+- **Slides 2, 14 and 15 — Investment recommendation:** Clarified that the €37.6 LBO valuation represents the maximum implied bid at a 20% target IRR, rather than a guaranteed share-price floor. Removed the unsupported 3:1 upside/downside ratio.
+
+**Outstanding data limitations:** CED's approximately $8bn revenue remains an estimate; no reliable overall CAGR was identified for Rexel's €320bn addressable market.
+
+All valuation outputs, financial models and investment recommendations remain unchanged.
