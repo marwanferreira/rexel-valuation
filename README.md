@@ -62,7 +62,7 @@ The three methods follow the framework taught in the course and are implemented 
 
 ### 2.4 Verification
 
-The workbook's formulas were evaluated with a spreadsheet engine outside Excel and reconciled to an independent re-implementation of the three models in Python (`scripts/06_independent_check.py`); the DCF reconciles to the euro, and the balance-sheet checks in the DCF and LBO sheets are zero. The deck's tables are computed from the same inputs.
+The workbook's formulas were evaluated with a spreadsheet engine outside Excel and reconciled to an independent re-implementation of the three models in Python (`scripts/06_independent_check.py`); the DCF reconciles to the euro, and the balance-sheet checks in the DCF and LBO sheets are zero. The deck's tables carry the same figures as the workbook (DCF €43.1, LBO bid €37.6).
 
 ---
 
