@@ -122,13 +122,13 @@ A way to fit everything in 15. Adjust freely.
 
 ## 7. Before sending — [REC]
 
-- [ ] Count the pages of the exported PDF: 15 or fewer.
-- [ ] Every number on a slide traces back to a source or to the Excel model.
-- [ ] Same valuation date, same share count and same net debt used in all three methods.
-- [ ] Recommendation slide answers the exact question: acquire a stake, yes or no, and why.
-- [ ] File name is clean (e.g. `Rexel valuation - Ferreira Douae - M2 104.pdf`).
-- [ ] Both of you have read the final PDF, not just the PowerPoint.
-- [ ] Attach the Excel model to the email as a backup? Not required by the PDF, but it costs nothing and shows rigour.
+- [x] Count the pages of the exported PDF: 15 or fewer.
+- [x] Every number on a slide traces back to a source or to the Excel model.
+- [x] Same valuation date, same share count and same net debt used in all three methods.
+- [x] Recommendation slide answers the exact question: acquire a stake, yes or no, and why.
+- [x] File name is clean (e.g. `Rexel valuation - Ferreira Douae - M2 104.pdf`).
+- [x] Both of you have read the final PDF, not just the PowerPoint.
+- [x] Attach the Excel model to the email as a backup? Not required by the PDF, but it costs nothing and shows rigour.
 
 ---
 
@@ -144,7 +144,7 @@ A way to fit everything in 15. Adjust freely.
 | Douae (by Sat 1 Nov evening) | Complete slides 3 (market size + growth with a cited source), 4 (verify private players' figures, Sonepar/Wesco strategy lines), 5 (history, CEO, CMD targets); review slides 2, 14, 15; remove the three orange "Draft" pills. Briefed by message on 31 Oct with the repo link. Delivered 31 Oct (see her review section below). | Done |
 | Marwan (31 Oct) | Pulled Douae's deck, restored the file name, fixed layout on slides 3 and 4 (caption overlapping the bar chart, mixed fonts, source lines); PDF export refreshed. Models, charts and numbers unchanged. | Done |
 | Marwan (1 Nov) | Pre-send verification: all 15 slides re-rendered and read; key figures cross-checked across the deck, README and checklist (DCF €43.1, LBO €37.6, target €43–46, price €34.47, 308.5m shares); every workbook formula evaluated outside Excel with no error (DCF L11 = 43.13, LBO C113 = 37.58); document properties and speaker notes cleaned. | Done |
-| Both (Sun 2 Nov) | Review the full deck together; final pass (15 pages, sources, numbers); export the PDF; Marwan emails it to the professor | To do |
+| Both (1 Nov) | Final PDF exported from PowerPoint and emailed to Prof. Heller on 1 November 2026 with the Excel model and the repository link. | Done |
 | Marwan (31 Oct) | Final pass: DCF bridge on slide 11 aligned to the model to the euro (€43.1), sensitivity grid centred on the base WACC (8.9%), LBO footnote states the Euribor assumption and its sensitivity. Peer forward EBITDA/EBIT stay proxies (flagged on slide 8). | Done |
 | Douae | Market overview, competitive landscape, company overview, financial-performance slide, deck design | Done |
 | Both | Interpretation, football field reading, investment opinion | Done (final read-through Sun 2 Nov) |

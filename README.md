@@ -3,7 +3,7 @@
 **Should an investor acquire a stake in Rexel?**
 
 Course project — *Introduction to Corporate Finance*, Université Paris Dauphine-PSL, Master 2 (104) Research in Finance, Prof. David Heller.
-Authors: **Marwan Ferreira da Silva** and **Douae El Adloun**. Submitted 2 November 2026.
+Authors: **Marwan Ferreira da Silva** and **Douae El Adloun**. Submitted 1 November 2026.
 
 This repository holds the complete work behind the 15-slide presentation: the data and its sources, the Excel model (listed peers, DCF, LBO bid), the charts, and the scripts used to collect the data and check the model. The deliverable itself is `Rexel valuation - deck.pptx`; a PDF export sits next to it.
 
